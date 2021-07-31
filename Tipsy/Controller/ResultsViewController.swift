@@ -10,15 +10,19 @@ import UIKit
 
 class ResultsViewController: UIViewController {
 
+    @IBOutlet weak var settingsLabel: UILabel!
     @IBOutlet weak var totalLabel: UILabel!
+    var totalValue:String?
+    var settingsValue:String?
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        settingsLabel.text=settingsValue
+        totalLabel.text=totalValue
         // Do any additional setup after loading the view.
     }
-    @IBOutlet weak var settingsLabel: UILabel!
     
     @IBAction func recalculatePressed(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
     }
     
     /*
